@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+$font: 'Montserrat', sans-serif;
+
 body {
 	margin: 0;
 	background-image: url("../imgs/star-wars-bg.jpg");
@@ -5,5 +9,18 @@ body {
 	background-position: center, center;
 	height: 100vh;
 	width: 100vw;
-	overflow: hidden;
+  overflow: hidden;
+  font-family: $font;
+}
+
+.main-logo {
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  margin-top: 5rem;
+  p{
+    color: #ffd23f;
+    font-size: 1.5rem;
+  }
 }
