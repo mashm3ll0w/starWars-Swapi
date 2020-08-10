@@ -77,9 +77,28 @@ body {
 }
 
 .character_container {
-  width: 80%;
+  width: 85%;
   height: 500px;
+  border: 2px solid #ffd23f;
+  border-radius: 10px;
+  margin: 0.5rem auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+}
+
+.xterCard {
   border: 1px solid #fff;
   border-radius: 10px;
-  margin: .5rem auto;
+  width: 275px;
+  height: 175px;
+  gap: 10px;
+  margin: 2rem auto;
+  text-align: center;
+  color: #ffd23f;
+}
+
+.name {
+  text-transform: uppercase;
 }
