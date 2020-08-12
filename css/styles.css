@@ -101,4 +101,9 @@ body {
 
 .name {
   text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.attribute {
+  color: #fff;
 }
