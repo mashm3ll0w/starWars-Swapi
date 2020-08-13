@@ -27,3 +27,13 @@ fetch("https://swapi.dev/api/people/")
 			container.appendChild(xterCard);
 		});
 	});
+
+		// search character function
+		let xterName = document.getElementById("xterName");
+		let btn = document.getElementById("submitBtn");
+		btn.addEventListener("click", () => {
+			event.preventDefault();
+			let queryName = xterName.value.split(" ").join("&");
+			let queryURL = `https://swapi.dev/api/people/?search=${queryName}`;
+			console.log(queryURL);
+		});
