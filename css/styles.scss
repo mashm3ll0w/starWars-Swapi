@@ -91,3 +91,30 @@ body {
 .attribute {
 	color: #fff;
 }
+
+.query_container {
+	max-width: 85%;
+	max-height: 500px;
+	border: 2px solid #ffd23f;
+	border-radius: 10px;
+	margin: 0.5rem auto;
+	padding: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+
+.queryCard {
+	border: 1.5px solid #fff;
+	border-radius: 10px;
+	width: 400px;
+	height: 200px;
+	gap: 10px;
+	margin: 5rem auto;
+	text-align: center;
+	color: #ffd23f;
+	font-size: 1.25rem;
+}

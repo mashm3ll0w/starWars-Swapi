@@ -23,7 +23,38 @@ fetch("https://swapi.dev/api/people/")
 			xterCard.appendChild(name);
 			xterCard.appendChild(gender);
 			xterCard.appendChild(hair_color);
-			xterCard.appendChild(skin_color)
+			xterCard.appendChild(skin_color);
 			container.appendChild(xterCard);
 		});
 	});
+
+// search character function
+let xterName = document.getElementById("xterName");
+let btn = document.getElementById("submitBtn");
+btn.addEventListener("click", () => {
+	event.preventDefault();
+	let queryName = xterName.value.split(" ").join("&");
+	let queryURL = `https://swapi.dev/api/people/?search=${queryName}`;
+
+	//fetch the URL with the query
+	fetch(queryURL)
+		.then((response) => response.json())
+		.then((data) => {
+			const fetchedData = data.results;
+			container.innerText = "";
+			container.classList.remove("character_container");
+			let nameCard = document.createElement("div");
+			nameCard.classList.add("queryCard");
+			let namePlate = document.createElement("h3");
+			namePlate.classList.add("name");
+			namePlate.innerText = fetchedData[0].name;
+			let gender = document.createElement("p");
+			gender.innerText = `Gender: ${fetchedData[0].gender}`;
+			let birth_year = document.createElement("p");
+			birth_year.innerText = `Birth Year: ${fetchedData[0].birth_year}`;
+			nameCard.appendChild(namePlate);
+			nameCard.appendChild(gender);
+			nameCard.appendChild(birth_year);
+			container.appendChild(nameCard);
+		});
+});
